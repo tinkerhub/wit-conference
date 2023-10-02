@@ -1,0 +1,39 @@
+{
+  "name": "make-a-ton",
+  "version": "6.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "webpack server --config webpack.dev.js",
+    "watch:scss": "sass --watch src/scss:public/css",
+    "build": "sass src/scss:public/css -s compressed && webpack --config webpack.prod.js",
+    "ci": "pnpm ci"
+  },
+  "author": "Rohit T P",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/three": "^0.141.0",
+    "autoprefixer": "^10.4.16",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "postcss": "^8.4.31",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.54.4",
+    "scss": "^0.2.4",
+    "sitemap-webpack-plugin": "^1.1.1",
+    "tailwindcss": "^3.3.3",
+    "ts-loader": "^8.0.2",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3",
+    "webpack-html-plugin": "^0.1.1"
+  },
+  "dependencies": {
+    "webp-converter": "^2.3.3"
+  }
+}

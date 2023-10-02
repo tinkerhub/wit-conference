@@ -1,0 +1,75 @@
+@import "./fonts.scss";
+
+//@import 'tailwindcss/base';
+//@import 'tailwindcss/components';
+//@import 'tailwindcss/utilities';
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: normal normal 400 16px Satoshi-Regular;
+  line-height: 28px;
+  position: relative;
+  background: #FFFFFF;
+}
+
+$grid-columns: 12;
+$gutter-width: 30px;
+
+$breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+);
+
+@mixin make-row() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc($gutter-width / -2);
+  margin-right: calc($gutter-width / -2);
+}
+
+@mixin make-col($size) {
+  flex: 0 0 auto;
+  width: 100% * calc($size / $grid-columns);
+  padding-left: calc($gutter-width / 2);
+  padding-right: calc($gutter-width / 2);
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
+  }
+}
+
+.row {
+  @include make-row();
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include make-col($i);
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include respond-to($breakpoint) {
+      .col-#{$breakpoint}-#{$i} {
+        @include make-col($i);
+      }
+    }
+  }
+}
+
+
