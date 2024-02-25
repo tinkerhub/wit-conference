@@ -17,7 +17,7 @@ jobs:
           cache: 'pnpm'
           # cache: 'npm' # https://github.com/actions/setup-node#caching-packages-dependencies
       - name: Install Dependancies
-        run: pnpm ci
+        run: pnpm i
       - run: pnpm build
       - name: Push Build
         uses: s0/git-publish-subdir-action@develop
