@@ -35,9 +35,6 @@
     <meta property="twitter:image"
           content="https://rohittp.imgix.net/index/hero-background.webp">
 
-    <link rel="preload" href="/src/font/clash-display/ClashDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/src/font/satoshi/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>WIT Conference</title>
@@ -45,12 +42,36 @@
 </head>
 <body>
 
-<section class="hero flex justify-center items-center overflow-hidden relative">
-    <div class="boot-animation absolute w-full h-full bg-black flex justify-center items-center">
-        <pre class="boot-text text-green-400 font-mono text-xs overflow-hidden">[BOOT TEXT GOES HERE...]</pre>
+<section class="hero overflow-hidden relative">
+    <div class="boot-animation absolute w-full h-full bg-black">
+        <div class="boot-text absolute font-mono overflow-hidden" id="bootText">
+        </div>
     </div>
-    <div class="ubuntu-boot-page absolute w-full h-full bg-purple-700 opacity-0 flex justify-center items-center">
-        <button class="register-btn bg-yellow-300 hover:bg-yellow-400 text-lg font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Register for Conference</button>
+    <nav class="navbar justify-evenly items-center p-5 boot-fade flex">
+        <div class="flex justify-center items-center gap-2">
+            <img src="https://rohittp.imgix.net/index/logo.webp" alt="WIT Conference" class="w-20 h-20">
+            <p class="text-2xl text-white lg:hidden">Women In Tech</p>
+        </div>
+        <div class="hidden lg:flex justify-evenly gap-5 font-mono text-lg">
+            <a href="#about" class="text-white">About</a>
+            <a href="#agenda" class="text-white">Agenda</a>
+            <a href="#schedule" class="text-white">Schedule</a>
+            <a href="#callforspeakers" class="text-white">Speakers</a>
+            <a href="#volunteers" class="text-white">Volunteers</a>
+        </div>
+    </nav>
+
+    <div class="ubuntu-boot-page font-mono w-full h-full flex items-center justify-center">
+        <div class="register-box p-5 lg:mr-10 boot-fade">
+            <h1 class="text-4xl font-bold text-white">WIT Conference 2024</h1>
+            <p class="text-white text-lg">A two-day un-conference style gathering conducted by TinkerHub.</p>
+            <p class="text-white text-lg mt-5">Venue: Kochi, Kerala</p>
+            <p class="text-white text-lg mb-3">Date: 12th and 13th of April 2024</p>
+            <div class="flex items-center justify-center mt-5">
+                <!-- HTML !-->
+                <button class="button-30" role="button">Register Now</button>
+            </div>
+        </div>
     </div>
 </section>
 
