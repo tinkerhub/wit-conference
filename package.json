@@ -6,8 +6,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "start": "webpack server --config webpack.dev.js",
-    "watch:scss": "sass --watch src/scss:public/css",
-    "build": "sass src/scss:public/css -s compressed && webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
     "ci": "pnpm ci"
   },
   "author": "Rohit T P",
@@ -32,6 +31,9 @@
     "webpack": "^5.90.3",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.15.1",
-    "webpack-html-plugin": "^0.1.1"
+    "webpack-html-plugin": "^0.1.1",
+    "sass-loader": "^14.1.1"
+  },
+  "dependencies": {
   }
 }
