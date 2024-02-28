@@ -26,13 +26,21 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.css$/i,
+                test: /\.s?css$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "postcss-loader"
+                    "postcss-loader",
+                    "sass-loader"
                 ],
-            }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext][query]', // Output directory and file naming
+                },
+            },
         ]
     },
     resolve: {
@@ -41,6 +49,7 @@ module.exports = {
     output: {
         filename: "bundle[name].[hash].js",
         path: path.resolve(__dirname, "build"),
+        publicPath: ""
     },
     optimization: {
         splitChunks: {
