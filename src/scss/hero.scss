@@ -1,6 +1,48 @@
 @import "./utils/base";
 
-// Define styles for the hero section
 .hero {
+  $boot-time: 5s;
 
+  @apply w-screen h-screen;
+
+  .boot-animation {
+    @apply absolute w-full h-full;
+    animation: bootUp $boot-time forwards;
+  }
+
+  .ubuntu-boot-page {
+    @apply absolute w-full h-full flex justify-center items-center;
+    animation: fadeInUbuntu 2 forwards;
+    animation-delay: $boot-time; // Delay the animation to sync with the boot text
+  }
+
+  @keyframes bootUp {
+    0% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+
+  @keyframes fadeInUbuntu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .boot-text {
+    // Add keyframes for boot text animation if needed
+  }
+
+  .register-btn {
+    // Add any additional styles if needed
+  }
 }

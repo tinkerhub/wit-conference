@@ -1,1 +1,1 @@
-export {}
+import "../scss/hero.scss";

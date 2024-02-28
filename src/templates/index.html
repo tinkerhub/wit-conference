@@ -35,10 +35,8 @@
     <meta property="twitter:image"
           content="https://rohittp.imgix.net/index/hero-background.webp">
 
-    <link rel="preload" href="/font/clash-display/ClashDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/font/satoshi/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preload" href="/src/font/clash-display/ClashDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/font/satoshi/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -47,7 +45,13 @@
 </head>
 <body>
 
-<section class="hero">
+<section class="hero flex justify-center items-center overflow-hidden relative">
+    <div class="boot-animation absolute w-full h-full bg-black flex justify-center items-center">
+        <pre class="boot-text text-green-400 font-mono text-xs overflow-hidden">[BOOT TEXT GOES HERE...]</pre>
+    </div>
+    <div class="ubuntu-boot-page absolute w-full h-full bg-purple-700 opacity-0 flex justify-center items-center">
+        <button class="register-btn bg-yellow-300 hover:bg-yellow-400 text-lg font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Register for Conference</button>
+    </div>
 </section>
 
 <section class="about">
