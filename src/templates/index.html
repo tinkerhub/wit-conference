@@ -79,10 +79,10 @@
     </div>
 </section>
 
-<section class="about w-full h-screen py-3 px-7 opacity-0 transition-opacity duration-500">
+<section class="about w-full h-auto bg-black py-3 px-7 opacity-0 transition-opacity duration-500">
     <div class="flex gap-4 items-center">
         <img src="/img/aboutus/aboutus.png" class="w-6" alt=""/>
-        <p class="text-xl md:text-2xl font-bold">About WIT</p>
+        <p class="text-xl md:text-2xl text-white font-bold">About WIT</p>
     </div>
     <!-- image section -->
     <div class="grid grid-cols-2 md:flex md:justify-around gap-3 mt-5">
@@ -97,14 +97,14 @@
         <div>
             <img
                     style="box-shadow: 5px 5px"
-                    class="hover:scale-110 border-2 transition-transform duration-200 md:max-w-96 border-white"
+                    class="hover:scale-110 border-2 shadow-white transition-transform duration-200 md:max-w-96 border-white"
                     src="/img/aboutus/sample-img.jpeg"
                     alt=""
             />
         </div>
     </div>
 
-    <p class="mt-7 text-center text-sm font-light md:px-32">
+    <p class="mt-7 text-center text-sm font-light md:px-32 text-white font-mono">
         Lorem ipsum dolor sit amet consectetur adipiscing elit, vehicula quam a
         class sociis nulla enim tortor, bibendum iaculis sollicitudin consequat
         sapien natoque. Mauris porta orci dictum erat interdum morbi netus
@@ -118,9 +118,9 @@
     <div class="flex justify-center">
         <div
                 class="w-ful flex justify-center bg-red-600 border-2 mt-5 border-black transition-transform duration-200 hover:scale-110"
-                style="box-shadow: 10px 10px; width: 200px"
+                style="box-shadow: 7px 7px #ffffff; width: 200px "
         >
-            <div class="text-center py-4 text-white font-bold">
+            <div class="text-center font-mono py-4 text-white font-bold">
                 WIT Conference
             </div>
         </div>
@@ -139,7 +139,7 @@
 <section class="volunteers w-full h-auto py-20 bg-black">
     <div class="pt-6 px-2 md:px-6 lg:px-10">
         <div class="w-full flex justify-start my-5 lg:my-10">
-            <p class="text-white font-bold  text-xl lg:text-3xl">Our Volunteers</p>
+            <p class="text-white font-bold font-mono text-xl lg:text-3xl">Our Volunteers</p>
         </div>
         <!-- card container -->
         <div id="volunteer-card-container"
@@ -148,12 +148,11 @@
         </div>
         <div class="mt-4 flex justify-center">
             <button id="seemore-btn"
-                    class="transition-opacity duration-300 ease-in-out border-[1px] border-white rounded-full px-3 py-1 bg-black text-white"
-                    onclick="showMore()">See More
+                    class="transition-opacity font-mono duration-300 ease-in-out border-2 border-white rounded-full px-3 py-1 bg-black text-white hover:bg-white hover:text-black"
+                    >See More
             </button>
             <button id="seeless-btn"
-                    class="hidden transition-opacity duration-300 ease-in-out border-[1px] border-white rounded-full px-3 py-1 bg-black text-white"
-                    onclick="showLess()">See Less
+                    class="hidden transition-opacity duration-600 ease-in-out border-2 border-white rounded-full px-3 py-1 bg-black text-white hover:bg-white hover:text-black">See Less
             </button>
 
         </div>
