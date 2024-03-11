@@ -5,15 +5,8 @@
 
   @apply w-screen h-screen;
 
-  .boot-animation {
-    @apply w-full h-full;
-    animation: bootUp $boot-time forwards;
-    z-index: -1;
-
-    .boot-text {
-      @apply w-full text-white;
-      animation: textScroll $boot-time linear forwards;
-    }
+  #ARButton {
+    position: relative !important;
   }
 
   .boot-fade{
