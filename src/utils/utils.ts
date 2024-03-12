@@ -16,12 +16,9 @@ const LETTERS = {
     ],
 };
 
-const IMAGES = [
-    {url: 'img/cubes/ada.webp', name: 'Ada Lovelace'},
-    {url: 'img/cubes/susan.webp', name: 'Susan Wojcicki'},
-]
-
 const text = ["W", "M", "C"];
+
+const num_images = 4;
 
 export const LETTER_MAP = ["W", "M", "C"].map((letter, index) => {
     const pattern = LETTERS[letter];
@@ -29,7 +26,7 @@ export const LETTER_MAP = ["W", "M", "C"].map((letter, index) => {
 
     const images = [];
     for (let i = 0; i < count; i++) {
-        images.push(IMAGES[IMAGES.length * Math.random() | 0]);
+        images.push(`/img/hero/cubes/${Math.floor(num_images * Math.random())}.webp`);
     }
 
     return {

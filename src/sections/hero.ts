@@ -91,7 +91,7 @@ function createTextFromCubes(letter, offsetX: number, offsetY: number, offsetZ: 
                 const Y = posY + Math.random() * cubeSize * 10;
                 const Z = offsetZ + Math.random() * cubeSize * 10;
 
-                const {url, name} = letter.images.pop();
+                const url = letter.images.pop();
 
                 const cube = createCube(X, Y, Z, cubeSize, url, letter.text);
                 cube.rotation.y = pattern[y][x] === '0' ? Math.PI / 2 - 0.15 : 0.15;
