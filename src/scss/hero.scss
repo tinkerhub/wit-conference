@@ -1,9 +1,9 @@
 @import "./utils/base";
 
 .hero {
-  $boot-time: 10s;
+  $boot-time: 15s;
 
-  @apply w-screen h-screen;
+  @apply h-screen;
 
   #ARButton {
     position: relative !important;

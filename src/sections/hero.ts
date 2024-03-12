@@ -12,7 +12,7 @@ const scene = new THREE.Scene();
 const aspectRatio = window.innerWidth / window.innerHeight;
 
 // Define the frustum size
-const frustumSize = 30;
+const frustumSize = 25;
 
 // Create an orthographic camera
 const camera = new THREE.OrthographicCamera(
@@ -21,26 +21,29 @@ const camera = new THREE.OrthographicCamera(
     1, 100
 );
 
-camera.position.z = frustumSize; // You might need to adjust this based on your scene's scale
+camera.position.z = frustumSize;
 const renderer = new THREE.WebGLRenderer({canvas});
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-function createTextTexture(text) {
+function createTextTexture(text: string) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
-    canvas.width = 256; // Adjust these dimensions based on your requirements
-    canvas.height = 256;
-    context.fillStyle = '#000000'; // Background color
+
+    const color = Math.random() > 0.5;
+
+    canvas.width = 128; // Adjust these dimensions based on your requirements
+    canvas.height = 128;
+    context.fillStyle = color ? '#ffffff' : '#ff4b00';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    context.fillStyle = '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0'); // Background color
-    context.fillRect(5, 5, canvas.width - 5, canvas.height - 5);
+    context.fillStyle =  color ? '#ff4b00' : '#ffffff';
+    context.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
 
-    context.font = '48px Arial'; // Adjust font size and style as needed
+    context.font = 'bold 130px monospace'; // Adjust font size and style as needed
     context.fillStyle = '#000000'; // Text color
     context.textAlign = 'center';
     context.textBaseline = 'middle';
-    context.fillText(text, canvas.width / 2, canvas.height / 2);
+    context.fillText(text, canvas.width / 2, canvas.height / 2 + 10);
 
     const texture = new THREE.Texture(canvas);
     texture.needsUpdate = true;
@@ -78,7 +81,7 @@ function createTextFromCubes(letter, offsetX: number, offsetY: number, offsetZ: 
 
     for (let y = 0; y < pattern.length; y++) {
         for (let x = 0; x < pattern[y].length; x++) {
-            if (pattern[y][x] === '1') {
+            if (pattern[y][x] === '1' || pattern[y][x] === '0') {
 
                 // Calculate position with spacing
                 const posX = offsetX + (x * (cubeSize + cubeSpacing));
@@ -91,7 +94,7 @@ function createTextFromCubes(letter, offsetX: number, offsetY: number, offsetZ: 
                 const {url, name} = letter.images.pop();
 
                 const cube = createCube(X, Y, Z, cubeSize, url, letter.text);
-                cube.rotation.y = 0.3;
+                cube.rotation.y = pattern[y][x] === '0' ? Math.PI / 2 - 0.15 : 0.15;
                 cubes.push({cube, posX, posY, posZ: offsetZ});
             }
         }
@@ -117,8 +120,6 @@ navigator.xr?.isSessionSupported('immersive-ar').then((supported) => {
         animate();
 });
 
-
-camera.position.z = 20;
 
 function animate() {
     if(!renderer.xr.enabled)
@@ -159,7 +160,7 @@ function animate() {
 }
 
 
-let mouse = new THREE.Vector2();
+let mouse = new THREE.Vector2(1000, 1000);
 
 function onMouseMove(event: { clientX: number; clientY: number; }) {
     // Calculate mouse position in normalized device coordinates (-1 to +1) for both components
