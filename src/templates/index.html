@@ -41,8 +41,6 @@
       content="https://rohittp.imgix.net/index/hero-background.webp"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <title>WIT Conference</title>
   </head>
   <body>
@@ -61,20 +59,18 @@
       </div>
       <nav class="navbar justify-evenly items-center p-5 boot-fade flex">
         <div class="flex justify-center items-center gap-2">
-          <img src="" alt="WIT Conference" class="w-20 h-20" />
+          <img src="/img/hero/logo.png" alt="logo" class="h-10 invert" />
           <p class="text-2xl text-white lg:hidden">Women In Tech</p>
         </div>
         <div class="hidden lg:flex justify-evenly gap-5 font-mono text-lg">
+          <a href="#register" class="text-white">Register</a>
           <a href="#about" class="text-white">About</a>
-          <a href="#agenda" class="text-white">Agenda</a>
-          <a href="#schedule" class="text-white">Schedule</a>
-          <a href="#callforspeakers" class="text-white">Speakers</a>
-          <a href="#volunteers" class="text-white">Volunteers</a>
+          <a href="#contact" class="text-white">Contact Us</a>
         </div>
       </nav>
     </section>
 
-    <section class="womenmakerscelebration w-full h-auto bg-black md:py-10 py-5 md:px-7 px-2">
+    <section id="register" class="womenmakerscelebration w-full h-auto bg-black md:py-10 py-5 md:px-7 px-2">
         <div class="text-white font-mono w-full flex flex-col items-center gap-5">
             <p class=" text-center text-3xl font-extrabold">Women Makers Celebration by Tinkerhub</p>
             <p class="text-center w-2/3 ">Join us for the Women Makers Celebration by TinkerHub, a premier 2-day event on <span class="font-bold"> March 22nd and 23rd</span>, dedicated to empowering, inspiring, and connecting women in technology. From engaging workshops to insightful panels, networking opportunities, and celebrating the success of Tink-Her-Hack, this event is designed for women at every stage of their tech journey. Dive into innovation, career development, and community with us!</p>
@@ -100,7 +96,7 @@
 
     </section>
 
-    <section class="about w-full h-auto bg-black md:py-10 py-5 md:px-7 px-2">
+    <section id="about" class="about w-full h-auto bg-black md:py-10 py-5 md:px-7 px-2">
       <div class="flex items-center">
         <img src="/img/aboutus/red-ball.png" class="md:w-28 w-20" alt="" />
         <p
@@ -202,35 +198,35 @@
 
     <section class="callforspeakers"></section>
 
-    <section class="volunteers w-full h-auto py-10 px-4 bg-black">
-      <div class="pt-6 px-2 md:px-6 lg:px-10">
-        <div class="w-full flex justify-start my-5 lg:my-10">
-          <p class="text-white font-bold font-mono text-xl lg:text-3xl">
-            Our Volunteers
-          </p>
-        </div>
-        <div
-          id="volunteer-card-container"
-          class="card-section w-full grid grid-cols-1 px-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4 gap-2"
-        ></div>
-        <div class="mt-4 flex justify-center">
-          <button
-            id="seemore-btn"
-            class="transition-opacity font-mono duration-300 ease-in-out border-2 border-white rounded-full px-3 py-1 bg-black text-white hover:bg-white hover:text-black"
-          >
-            See More
-          </button>
-          <button
-            id="seeless-btn"
-            class="hidden transition-opacity duration-600 ease-in-out border-2 border-white rounded-full px-3 py-1 bg-black text-white hover:bg-white hover:text-black"
-          >
-            See Less
-          </button>
-        </div>
-      </div>
-    </section>
+<!--    <section class="volunteers w-full h-auto py-10 px-4 bg-black">-->
+<!--      <div class="pt-6 px-2 md:px-6 lg:px-10">-->
+<!--        <div class="w-full flex justify-start my-5 lg:my-10">-->
+<!--          <p class="text-white font-bold font-mono text-xl lg:text-3xl">-->
+<!--            Our Volunteers-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        <div-->
+<!--          id="volunteer-card-container"-->
+<!--          class="card-section w-full grid grid-cols-1 px-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4 gap-2"-->
+<!--        ></div>-->
+<!--        <div class="mt-4 flex justify-center">-->
+<!--          <button-->
+<!--            id="seemore-btn"-->
+<!--            class="transition-opacity font-mono duration-300 ease-in-out border-2 border-white rounded-full px-3 py-1 bg-black text-white hover:bg-white hover:text-black"-->
+<!--          >-->
+<!--            See More-->
+<!--          </button>-->
+<!--          <button-->
+<!--            id="seeless-btn"-->
+<!--            class="hidden transition-opacity duration-600 ease-in-out border-2 border-white rounded-full px-3 py-1 bg-black text-white hover:bg-white hover:text-black"-->
+<!--          >-->
+<!--            See Less-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
 
-    <section class="contactus w-full h-auto py-10 px-4 bg-black">
+    <section id="contact" class="contactus w-full h-auto py-10 px-4 bg-black">
         <div class="pt-6 px-2 md:px-6 lg:px-10">
             <div class="w-full flex justify-start my-5 lg:my-10">
                 <p class="text-white font-bold font-mono text-xl lg:text-3xl">
@@ -238,7 +234,8 @@
                 </p>
             </div>
             <div class="flex justify-center">
-                <p class="text-white font-mono">For any inquiries about the Women Makers Celebration, registration process, or how you can get involved, please don't hesitate to reach out to us at [contact information].</p>
+                <p class="text-white font-mono">For any inquiries about the Women Makers Celebration, registration process, or how you can get involved, please don't hesitate to reach out to us at
+                  <a href="mailto:hi@tinkerhub.org">hi@tinkerhub.org</a></p>
 
             </div>
 
