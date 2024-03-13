@@ -491,6 +491,8 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}.fixed {
+  position: fixed;
 }.absolute {
   position: absolute;
 }.relative {
@@ -628,6 +630,8 @@ video {
   border-top-left-radius: 0.5rem;
 }.rounded-tr-lg {
   border-top-right-radius: 0.5rem;
+}.border {
+  border-width: 1px;
 }.border-2 {
   border-width: 2px;
 }.border-\[1px\] {
@@ -757,6 +761,8 @@ video {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}.outline {
+  outline-style: solid;
 }.blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -778,6 +784,8 @@ video {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }*{margin:0;padding:0}html{scroll-behavior:smooth}body{font:normal normal 400 16px Satoshi-Regular;line-height:28px;position:relative;background:#fff}.hero {
   height: 100vh;
 }.hero #ARButton{position:relative !important}.hero .boot-fade{animation:fadeInUbuntu 15s forwards}.hero .ubuntu-boot-page .register-box{z-index:2;height:min(90%,400px);width:min(90%,600px);background:rgba(243,97,97,.44);border-radius:16px;box-shadow:0 4px 30px rgba(245,99,99,.4);backdrop-filter:blur(19.4px);-webkit-backdrop-filter:blur(19.4px)}.hero .ubuntu-boot-page .register-box .button-30{align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fcfcfd;border-radius:4px;border-width:0;box-shadow:rgba(45,35,66,.4) 0 2px 4px,rgba(45,35,66,.3) 0 7px 13px -3px,#d6d6e7 0 -3px 0 inset;box-sizing:border-box;color:#36395a;cursor:pointer;display:inline-flex;font-family:"JetBrains Mono",monospace;height:48px;justify-content:center;line-height:1;list-style:none;overflow:hidden;padding-left:16px;padding-right:16px;position:relative;text-align:left;text-decoration:none;transition:box-shadow .15s,transform .15s;-moz-user-select:none;user-select:none;-webkit-user-select:none;touch-action:manipulation;white-space:nowrap;will-change:box-shadow,transform;font-size:18px}.hero .ubuntu-boot-page .register-box .button-30:focus{box-shadow:#d6d6e7 0 0 0 1.5px inset,rgba(45,35,66,.4) 0 2px 4px,rgba(45,35,66,.3) 0 7px 13px -3px,#d6d6e7 0 -3px 0 inset}.hero .ubuntu-boot-page .register-box .button-30:hover{box-shadow:rgba(45,35,66,.4) 0 4px 8px,rgba(45,35,66,.3) 0 7px 13px -3px,#d6d6e7 0 -3px 0 inset;transform:translateY(-2px)}.hero .ubuntu-boot-page .register-box .button-30:active{box-shadow:#d6d6e7 0 3px 7px inset;transform:translateY(2px)}@keyframes textScroll{0%{top:100%;filter:blur(0)}50%{filter:blur(0)}100%{filter:blur(5px);top:0}}@keyframes fadeInUbuntu{from{opacity:0}to{opacity:1}}.hover\:scale-110:hover {
