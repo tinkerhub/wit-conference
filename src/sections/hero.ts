@@ -33,10 +33,10 @@ function createTextTexture(text: string) {
 
     canvas.width = 128; // Adjust these dimensions based on your requirements
     canvas.height = 128;
-    context.fillStyle = color ? '#ffffff' : '#ff4b00';
+    context.fillStyle = color ? '#ffffff' : '#FF5237';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    context.fillStyle =  color ? '#ff4b00' : '#ffffff';
+    context.fillStyle =  color ? '#FF5237' : '#ffffff';
     context.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
 
     context.font = 'bold 130px monospace'; // Adjust font size and style as needed
