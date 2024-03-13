@@ -12,7 +12,7 @@ const scene = new THREE.Scene();
 const aspectRatio = window.innerWidth / window.innerHeight;
 
 // Define the frustum size
-const frustumSize = 25;
+const frustumSize = 40;
 
 // Create an orthographic camera
 const camera = new THREE.OrthographicCamera(
@@ -104,7 +104,7 @@ function createTextFromCubes(letter, offsetX: number, offsetY: number, offsetZ: 
 }
 
 const cubes = [];
-const offsets = [-22, -3, 15]
+const offsets = [-22, -4, 14]
 for (let i = 0; i < LETTER_MAP.length; i++) {
     cubes.push(...createTextFromCubes(LETTER_MAP[i], offsets[i], 0, 0, 3));
 }
@@ -169,7 +169,6 @@ function onMouseMove(event: { clientX: number; clientY: number; }) {
 }
 
 window.addEventListener('mousemove', onMouseMove, false);
-
 
 function onWindowResize() {
     // camera.aspect = window.innerWidth / window.innerHeight;
