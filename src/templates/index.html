@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <meta name="title" content="Women Maker Celebration" />
+    <meta name="title" content="WIT-Conference" />
     <meta name="description" content="" />
     <meta
       name="keywords"
@@ -41,6 +41,8 @@
       content="https://rohittp.imgix.net/index/hero-background.webp"
     />
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>WIT Conference</title>
   </head>
   <body>
@@ -63,37 +65,85 @@
           <p class="text-2xl text-white lg:hidden">Women In Tech</p>
         </div>
         <div class="hidden lg:flex justify-evenly gap-5 font-mono text-lg">
-          <a href="#register" class="text-white">Register</a>
           <a href="#about" class="text-white">About</a>
           <a href="#contact" class="text-white">Contact Us</a>
         </div>
       </nav>
     </section>
 
-    <section id="register" class="womenmakerscelebration w-full h-auto bg-black md:py-10 py-5 md:px-7 px-2">
-        <div class="text-white font-mono w-full flex flex-col items-center gap-5">
-            <p class=" text-center text-3xl font-extrabold">Women Makers Celebration by Tinkerhub</p>
-            <p class="text-center w-2/3 ">Join us for the Women Makers Celebration by TinkerHub, a premier 2-day event on <span class="font-bold"> March 22nd and 23rd</span>, dedicated to empowering, inspiring, and connecting women in technology. From engaging workshops to insightful panels, networking opportunities, and celebrating the success of Tink-Her-Hack, this event is designed for women at every stage of their tech journey. Dive into innovation, career development, and community with us!</p>
-        </div>
-        <div class="w-full flex justify-center">
-            <div class="flex md:flex-row flex-col gap-7 justify-around my-5 text-white font-mono">
-                <div class="flex gap-5 items-center">
-                    <img src="/img/womenmakerscelebration/calendar.png" class="w-7" alt="">
-                    <p>March 22nd and 23rd</p>
-                </div>
-                <div class="flex gap-5 items-center">
-                    <img src="/img/womenmakerscelebration/location.png" class="w-7" alt="">
-                    <p>Kerala Startup Mission</p>
-                </div>
+    <section class="womenmakerscelebration ">
+        
+
+    </section>
+
+    <section class="secondsection w-full h-screen">
+      <div class="md:flex">
+        <!-- image section -->
+        <div class="hidden md:flex flex-col h-screen w-1/2 bg-white">
+          <div class="flex-grow"></div>
+          <div class=" w-[35rem] h-[25rem] ms-36">
+            <div class="w-full h-full grid grid-cols-5 gap-4">
+              <!-- Row 1 -->
+              <div class="col-span-3 ">
+                <img src="/img/secondsection/picture1.jpg" class="bg-cover rounded-br-xl" alt="">
+              </div>
+              <div class="col-span-2 ">
+                <img src="/img/secondsection/picture1.jpg" class="bg-cover aspect-square rounded-bl-xl" alt="">
+              </div>
+              
+              <!-- Row 2 -->
+              <div class="col-span-2 ">
+                <img src="/img/secondsection/picture1.jpg" class="bg-cover aspect-square rounded-tr-lg" alt="">
+              </div>
+              <div class="col-span-3 ">
+                <img src="/img/secondsection/picture1.jpg" class="bg-cover rounded-tl-lg" alt="">
+              </div>
             </div>
+            
+
+          </div>
+          <div class="flex-grow"></div>
         </div>
-        <div class="flex justify-center">
-                <a href="https://airtable.com/app5Zrc5Yh9ThtD60/shrLIICJd6IC1RkKE" class="bg-gray-600 text-white px-3 py-2 rounded-lg font-mono">Register for March 23rd</a>
+        <!-- content section -->
+        <div class="h-screen md:w-1/2 bg-[#F3F0FF] pt-20 md:px-12 px-3">
+          <p class="font-bold text-[#5B36F7] py-10 text-2xl font-sans">Why Join Women Makers Celebration by Tinkerhub?</p>
+          <div class="font-sans text-[#666666] text-sm">
+            <p>The Women Makers Celebration is not just a conference; it's a platform for creating an inclusive and diverse tech industry in Kerala and beyond. Our mission is to:
+            </p>
+            
+              <p class="my-2"> <span class="font-bold">Inspire</span> with stories from the successful Tink-Her-Hack initiative and other remarkable women in tech.</p>
+              <p class="my-2"><span class="font-bold">Educate</span> through hands-on workshops and sessions led by industry experts.</p>
+              <p class="my-2"><span class="font-bold">Connect</span> attendees with mentors, peers, and potential employers, fostering a vibrant community of women makers.</p>
+          </div>   
+          <div class="mt-8">
+            <div class="flex items-center w-full border-[1px] bg-white border-gray-400 rounded-lg p-2">
+              <!-- blue box -->
+              <div class="bg-[#5B36F7] rounded-lg w-3/12 h-20 flex flex-col items-center justify-center gap-1">
+                  <img src="/img/secondsection/calendar.png" class="w-5" alt="">
+                  <p class="text-white text-sm font-sans font-semibold">Day 1</p>
+              </div>
+              <div class="w-9/12">
+                <p class="text-sm px-3 md:px-6 w-full font-sans">An exclusive session for top participants of Tink-Her-Hack, featuring personalized workshops and mentoring.</p>
+              </div>
+            </div>
+            <div class="flex items-center mt-2 w-full border-[1px] bg-white border-gray-400 rounded-lg p-2">
+              <!-- blue box -->
+              <div class="bg-[#5B36F7] rounded-lg w-3/12 h-20 flex flex-col items-center justify-center gap-1">
+                  <img src="/img/secondsection/calendar.png" class="w-5" alt="">
+                  <p class="text-white text-sm font-sans font-semibold">Day 2</p>
+              </div>
+              <div class="w-9/12">
+                <p class="text-sm px-3 md:px-6 w-full font-sans">Open to all with registration, offering a wide array of sessions on technology, professional development, and more.</p>
         </div>
+        </div>
+              </div>
+
         <div class="flex justify-center mt-4 opacity-70">
             <p class="font-mono text-white text-center w-5/6">Note: Due to limited space, registration is subject to a shortlisting process.Shortlisted attendees will be notified via email with further details.</p>
-    </div>
+          </div>     
 
+        </div>
+      </div>
     </section>
 
     <section id="about" class="about w-full h-auto bg-black md:py-10 py-5 md:px-7 px-2">
@@ -113,7 +163,7 @@
             <img
               style="box-shadow: 5px 5px"
               class="hover:scale-110 border-2 border-white transition-transform duration-200 md:w-auto"
-              src="/img/aboutus/about-pic-1.webp"
+              src="/img/aboutus/about-pic-1.jpg"
               alt=""
             />
           </div>
@@ -121,7 +171,7 @@
             <img
               style="box-shadow: 5px 5px"
               class="hover:scale-110 border-2 transition-transform duration-200 md:w-auto border-white"
-              src="/img/aboutus/about-pic-2.webp"
+              src="/img/aboutus/about-pic-2.jpg"
               alt=""
             />
           </div>
@@ -129,7 +179,7 @@
             <img
               style="box-shadow: 5px 5px"
               class="hover:scale-110 border-2 transition-transform duration-200 md:w-full border-white"
-              src="/img/aboutus/about-pic-3.webp"
+              src="/img/aboutus/about-pic-3.jpg"
               alt=""
             />
           </div>
@@ -226,7 +276,7 @@
 <!--      </div>-->
 <!--    </section>-->
 
-    <section id="contact" class="contactus w-full h-auto py-10 px-4 bg-black">
+    <section class="contactus w-full h-auto py-10 px-4 bg-black">
         <div class="pt-6 px-2 md:px-6 lg:px-10">
             <div class="w-full flex justify-start my-5 lg:my-10">
                 <p class="text-white font-bold font-mono text-xl lg:text-3xl">
@@ -254,13 +304,13 @@
           />
         </a>
         <div
-          class="text-white font-mono md:flex justify-evenly md:gap-10 md:px-10"
+          class="text-white md:flex justify-evenly md:gap-10 md:px-10"
         >
           <div class="my-6">
-            <p class="font-bold my-2">[ Connect ]</p>
-            <a href="" class="block text-gray-300">About</a>
-            <a href="" class="block text-gray-300">Contact</a>
-            <a href="" class="block text-gray-300">Impact Reports</a>
+            <p class="font-bold my-2 text-black">[ Connect ]</p>
+            <a href="" class="block text-[#FF5237]">About</a>
+            <a href="" class="block text-[#FF5237]">Contact</a>
+            <a href="" class="block text-[#FF5237]">Impact Reports</a>
           </div>
           <div class="my-6">
             <p class="font-bold my-2">[ Get to know ]</p>
@@ -312,3 +362,4 @@
     </section>
   </body>
 </html>
+
