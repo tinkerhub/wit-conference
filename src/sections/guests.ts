@@ -20,7 +20,7 @@ function makeCard(name = "", title = "", description = "", image = "/img/guests/
 
 const cardsContainer = document.getElementById("guestCards");
 
-const guests = [
+export const Guests = [
     ['Athira T J ', 'Data Associate', 'Reap Benefit', '/img/guests/athira.jpeg'],
     ['Akhila ', 'Co-Founder', 'Tech4Good Community', '/img/guests/akhila.jpeg'],
     ['Vidya ', 'Ex Data Scientist', 'Tech4Good Community', '/img/guests/vidya.jpeg'],
@@ -32,6 +32,5 @@ const guests = [
     ['G G'],
 ];
 
-cardsContainer.innerHTML = guests.map((row) => makeCard(...row)).join("\n");
-
-export {};
+if (cardsContainer)
+    cardsContainer.innerHTML = Guests.map((row) => makeCard(...row)).join("\n");

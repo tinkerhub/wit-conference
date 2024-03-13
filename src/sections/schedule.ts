@@ -85,7 +85,7 @@ function makeDay(day: string) {
     <p class="text-2xl font-bold py-10">${day}</p>
         <!-- card-container -->
         <div class="grid grid-cols-2 md:grid-cols-7  gap-3">
-            ${Schedule[day].map((event, i) => makeEvent(event, i+1)).join('')}
+            ${Schedule[day].map((event, i) => makeEvent(event, i + 1)).join('')}
         </div>
     </p>
     `
@@ -93,4 +93,5 @@ function makeDay(day: string) {
 
 const scheduleContainer = document.getElementById("scheduleContainer");
 
-scheduleContainer.innerHTML = Object.keys(Schedule).map(day => makeDay(day)).join('');
+if (scheduleContainer)
+    scheduleContainer.innerHTML = Object.keys(Schedule).map(day => makeDay(day)).join('');
