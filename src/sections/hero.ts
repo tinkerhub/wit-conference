@@ -12,7 +12,7 @@ const scene = new THREE.Scene();
 const aspectRatio = window.innerWidth / window.innerHeight;
 
 // Define the frustum size
-const frustumSize = 25;
+const frustumSize = 40;
 
 // Create an orthographic camera
 const camera = new THREE.OrthographicCamera(
@@ -33,10 +33,10 @@ function createTextTexture(text: string) {
 
     canvas.width = 128; // Adjust these dimensions based on your requirements
     canvas.height = 128;
-    context.fillStyle = color ? '#ffffff' : '#ff4b00';
+    context.fillStyle = color ? '#ffffff' : '#FF5237';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    context.fillStyle =  color ? '#ff4b00' : '#ffffff';
+    context.fillStyle =  color ? '#FF5237' : '#ffffff';
     context.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
 
     context.font = 'bold 130px monospace'; // Adjust font size and style as needed
@@ -104,7 +104,7 @@ function createTextFromCubes(letter, offsetX: number, offsetY: number, offsetZ: 
 }
 
 const cubes = [];
-const offsets = [-22, -3, 15]
+const offsets = [-22, -4, 14]
 for (let i = 0; i < LETTER_MAP.length; i++) {
     cubes.push(...createTextFromCubes(LETTER_MAP[i], offsets[i], 0, 0, 3));
 }
@@ -169,7 +169,6 @@ function onMouseMove(event: { clientX: number; clientY: number; }) {
 }
 
 window.addEventListener('mousemove', onMouseMove, false);
-
 
 function onWindowResize() {
     // camera.aspect = window.innerWidth / window.innerHeight;
