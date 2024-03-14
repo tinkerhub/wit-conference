@@ -1,37 +1,40 @@
+const toEntry = (title: string, venue: string, capacity: number) => ({ title, venue, capacity });
 export const Schedule = {
-    "Day 1 : March 22": [
-        // {
-        //     title: "Opening Ceremony",
-        //     speaker: "John Doe",
-        //     time: "10:00 AM"
-        // },
-        // {
-        //     title: "Keynote",
-        //     speaker: "Jane Doe",
-        //     time: "11:00 AM"
-        // },
-        // {
-        //     title: "Lunch",
-        //     speaker: "N/A",
-        //     time: "12:00 PM"
-        // },
-        // {
-        //     title: "Workshop",
-        //     speaker: "John Doe",
-        //     time: "1:00 PM"
-        // },
-        // {
-        //     title: "Networking",
-        //     speaker: "N/A",
-        //     time: "2:00 PM"
-        // },
-        // {
-        //     title: "Closing Ceremony",
-        //     speaker: "Jane Doe",
-        //     time: "3:00 PM"
-        // }
-    ],
-    "Day 2 : March 23": [
+    "Day 1, March 22": {
+        "10:00 AM - 11:00 AM": [
+            toEntry("Opening Ceremony", "Venue 1, Main Conference", 200)
+        ],
+        "11:15 AM - 12:00 PM": [
+            toEntry("Building Your Career in product startups", "Venue 1, Main Conference", 200),
+            toEntry("How communities play a role in increasing women in tech", "Venue 2, Amphitheater", 100),
+            toEntry("Game", "Venue 3, Career Hub", 36),
+            toEntry("1-1 Mentoring", "Venue 4, Innovation Lab", 8),
+            toEntry("Flash / Lightning Talks", "Area in front of Venue 1", NaN)
+        ],
+        "12:00 PM - 12:45 PM": [
+            toEntry("Women Maker / Micro SAAS", "Venue 1, Main Conference", 200),
+            toEntry("Gender Gap in workforce in Kerala, Panel", "Venue 2, Amphitheater", 100),
+            toEntry("Possibility Board", "Venue 3, Career Hub", 36),
+        ],
+        "01:00 PM - 2:00 PM": [
+            toEntry("Lunch Break & Networking", "Every where except Lobby", 344),
+            toEntry("1-1 Mentoring", "Lobby", NaN)
+        ],
+        "02:00 PM - 03:00 PM": [
+            toEntry("Engineers Solving Social Problems, Akhila", "Venue 2, Amphitheater", 100),
+            toEntry("Game", "Venue 3, Career Hub", 36),
+        ],
+        "3:00 PM - 4:00 PM": [
+            toEntry("Tech Leadership - Sumeeti, Tessy and Chetana", "Venue 1, Main Conference", 200),
+            toEntry("Tech Entrepreneurship, KSUM / Running a Product Company", "Venue 2, Amphitheater", 100),
+            toEntry("Flash Talks", "Venue 3, Career Hub", 36),
+        ],
+        "04:30 PM - 05:00 PM": [
+            toEntry("Closing Ceremony - Recognition and Awards", "Venue 2, Amphitheater", 100),
+            toEntry("Technical Track Placeholder", "Venue 3, Career Hub", 36),
+        ]
+    },
+    "Day 2, March 23": [
         // {
         //     title: "Opening Ceremony",
         //     speaker: "John Doe",
