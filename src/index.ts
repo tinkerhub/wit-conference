@@ -31,6 +31,8 @@ function init() {
             onReduce()
         }
     });
+
+    toggle.dispatchEvent(new Event('change'));
 }
 
 function onToggle(e, id, $collapser) {
