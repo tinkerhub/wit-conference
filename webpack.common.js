@@ -71,14 +71,14 @@ module.exports = {
                     // favicon: path.resolve(__dirname, "./public/favicon/favicon.ico"),
                     filename: `${page}.html`,
                     chunks: [page],
-                    title: "Make-A-Ton",
+                    title: "WMC",
                     scriptLoading: "defer",
-                    publicPath: "/"
+                    publicPath: "/",
                 })
         ),
         new MiniCssExtractPlugin({filename: "styles.[contenthash].css"}),
         new SitemapPlugin({
-            base: "https://makeaton.org",
+            base: "https://wmc.tinkerhub.org",
             paths: pages.map((p) => `/${p.replace("index", "")}`)
         })
     ]

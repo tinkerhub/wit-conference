@@ -57,7 +57,7 @@ body {
 
 .property {
   font-weight: bold;
-  color: #FF5237;
+  color: #E61F00;
   text-transform: capitalize;
 }
 
@@ -223,4 +223,14 @@ body {
   position: fixed;
   bottom: 10px;
   right: 10px;
+}
+
+#json {
+  overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;  /* Safari and Chrome */
+    }
 }
