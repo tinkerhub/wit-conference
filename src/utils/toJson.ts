@@ -35,7 +35,11 @@ export default function valueToHTML(value: Object) {
         case 'string':
             if (/^(http|https):\/\/[^\s]+$/.test(value as string)) {
                 output += `${decorateWithSpan('"', 'type-string')}<a target="_blank" href="${value}">${htmlEncode(value)}</a>${decorateWithSpan('"', 'type-string')}`
-            } else {
+            }
+            else if (/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value as string)) {
+                output += `${decorateWithSpan('"', 'type-string')}<a href="mailto:${value}">${htmlEncode(value)}</a>${decorateWithSpan('"', 'type-string')}`
+            }
+            else {
                 output += decorateWithSpan(`"${value}"`, 'type-string')
             }
             break

@@ -1,67 +1,67 @@
 export const Schedule = {
     "Day 1 : March 22": [
-        {
-            title: "Opening Ceremony",
-            speaker: "John Doe",
-            time: "10:00 AM"
-        },
-        {
-            title: "Keynote",
-            speaker: "Jane Doe",
-            time: "11:00 AM"
-        },
-        {
-            title: "Lunch",
-            speaker: "N/A",
-            time: "12:00 PM"
-        },
-        {
-            title: "Workshop",
-            speaker: "John Doe",
-            time: "1:00 PM"
-        },
-        {
-            title: "Networking",
-            speaker: "N/A",
-            time: "2:00 PM"
-        },
-        {
-            title: "Closing Ceremony",
-            speaker: "Jane Doe",
-            time: "3:00 PM"
-        }
+        // {
+        //     title: "Opening Ceremony",
+        //     speaker: "John Doe",
+        //     time: "10:00 AM"
+        // },
+        // {
+        //     title: "Keynote",
+        //     speaker: "Jane Doe",
+        //     time: "11:00 AM"
+        // },
+        // {
+        //     title: "Lunch",
+        //     speaker: "N/A",
+        //     time: "12:00 PM"
+        // },
+        // {
+        //     title: "Workshop",
+        //     speaker: "John Doe",
+        //     time: "1:00 PM"
+        // },
+        // {
+        //     title: "Networking",
+        //     speaker: "N/A",
+        //     time: "2:00 PM"
+        // },
+        // {
+        //     title: "Closing Ceremony",
+        //     speaker: "Jane Doe",
+        //     time: "3:00 PM"
+        // }
     ],
     "Day 2 : March 23": [
-        {
-            title: "Opening Ceremony",
-            speaker: "John Doe",
-            time: "10:00 AM"
-        },
-        {
-            title: "Keynote",
-            speaker: "Jane Doe",
-            time: "11:00 AM"
-        },
-        {
-            title: "Lunch",
-            speaker: "N/A",
-            time: "12:00 PM"
-        },
-        {
-            title: "Workshop",
-            speaker: "John Doe",
-            time: "1:00 PM"
-        },
-        {
-            title: "Networking",
-            speaker: "N/A",
-            time: "2:00 PM"
-        },
-        {
-            title: "Closing Ceremony",
-            speaker: "Jane Doe",
-            time: "3:00 PM"
-        }
+        // {
+        //     title: "Opening Ceremony",
+        //     speaker: "John Doe",
+        //     time: "10:00 AM"
+        // },
+        // {
+        //     title: "Keynote",
+        //     speaker: "Jane Doe",
+        //     time: "11:00 AM"
+        // },
+        // {
+        //     title: "Lunch",
+        //     speaker: "N/A",
+        //     time: "12:00 PM"
+        // },
+        // {
+        //     title: "Workshop",
+        //     speaker: "John Doe",
+        //     time: "1:00 PM"
+        // },
+        // {
+        //     title: "Networking",
+        //     speaker: "N/A",
+        //     time: "2:00 PM"
+        // },
+        // {
+        //     title: "Closing Ceremony",
+        //     speaker: "Jane Doe",
+        //     time: "3:00 PM"
+        // }
     ]
 }
 

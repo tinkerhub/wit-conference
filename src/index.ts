@@ -1,7 +1,11 @@
+import "./scss/index.scss";
+
 import valueToHTML from "./utils/toJson";
 import {data} from "./utils/jsonData";
 
 document.getElementById("json").innerHTML = valueToHTML(data);
+
+const toggle = document.getElementById('toggle')
 
 let collapsers, $selectedLI;
 
@@ -18,28 +22,15 @@ function init() {
         }
     }
 
-    const $copyPath = document.createElement('div')
-    $copyPath.className = 'copy-path'
-
-    const $toolbox = document.createElement('div')
-    $toolbox.className = 'toolbox'
-
-    const $expand = document.createElement('button')
-    $expand.id = 'expand_all'
-    $expand.textContent = '+'
-
-    const $reduce = document.createElement('button')
-    $reduce.id = 'reduce_all'
-    $reduce.textContent = '-'
-
-    $toolbox.append($expand)
-    $toolbox.append($reduce)
-
-    document.body.append($toolbox)
     document.body.onclick = onMouseClick
 
-    $expand.onclick = onExpand
-    $reduce.onclick = onReduce
+    toggle.addEventListener('change', e => {
+        if (!e.target["checked"]) {
+            onExpand()
+        } else {
+            onReduce()
+        }
+    });
 }
 
 function onToggle(e, id, $collapser) {
