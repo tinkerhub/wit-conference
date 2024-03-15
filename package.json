@@ -7,11 +7,13 @@
     "preinstall": "npx only-allow pnpm",
     "start": "webpack server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "ci": "pnpm ci"
+    "lhci:mobile": "lhci autorun",
+    "lhci:desktop": "lhci autorun --collect.settings.preset=desktop"
   },
   "author": "Rohit T P",
   "license": "MIT",
   "devDependencies": {
+    "@lhci/cli": "^0.13.0",
     "@types/three": "^0.141.0",
     "autoprefixer": "^10.4.17",
     "clean-webpack-plugin": "^4.0.0",
