@@ -17,6 +17,11 @@ function decorateWithSpan(value: Object, className: string) {
     return `<span class="${className}">${htmlEncode(value)}</span>`
 }
 
+function withA(url: string | Object){
+    return `<a target="_blank" href="${url}">${htmlEncode(url)}</a>`
+
+}
+
 export default function valueToHTML(value: Object) {
     const type = value === null ? 'null' : typeof value
     let output = ''
@@ -34,10 +39,10 @@ export default function valueToHTML(value: Object) {
 
         case 'string':
             if (/^(http|https):\/\/[^\s]+$/.test(value as string)) {
-                output += `${decorateWithSpan('"', 'type-string')}<a target="_blank" href="${value}">${htmlEncode(value)}</a>${decorateWithSpan('"', 'type-string')}`
+                output += `${decorateWithSpan('"', 'type-string')}${withA(value)}${decorateWithSpan('"', 'type-string')}`
             }
             else if (/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value as string)) {
-                output += `${decorateWithSpan('"', 'type-string')}<a href="mailto:${value}">${htmlEncode(value)}</a>${decorateWithSpan('"', 'type-string')}`
+                output += `${decorateWithSpan('"', 'type-string')}${withA("mailto:"+value)}${htmlEncode(value)}</a>${decorateWithSpan('"', 'type-string')}`
             }
             else {
                 output += decorateWithSpan(`"${value}"`, 'type-string')

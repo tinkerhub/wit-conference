@@ -7,12 +7,10 @@ document.getElementById("json").innerHTML = valueToHTML(data);
 
 const toggle = document.getElementById('toggle')
 
-let collapsers, $selectedLI;
-
 function init() {
-    collapsers = document.querySelectorAll('#json .collapsible .collapsible')
+    const collapsers = document.querySelectorAll('#json .collapsible .collapsible')
 
-    for (const $collapser of collapsers) {
+    collapsers.forEach($collapser => {
         const $parent = $collapser.parentElement
         const id = Math.random().toString(36);
         $parent.id = id
@@ -20,23 +18,18 @@ function init() {
         $parent.onclick = e => {
             onToggle(e, id, $collapser)
         }
-    }
-
-    document.body.onclick = onMouseClick
-
-    toggle.addEventListener('change', e => {
-        if (!e.target["checked"]) {
-            onExpand()
-        } else {
-            onReduce()
-        }
     });
 
+    toggle.addEventListener('change', (e) =>
+        collapsers.forEach(e.target["checked"] ? reduce : expand));
+
     toggle.dispatchEvent(new Event('change'));
+
+    document.querySelectorAll("a").forEach((a) =>
+        a.onclick = (e) => e.stopPropagation());
 }
 
 function onToggle(e, id, $collapser) {
-    e.preventDefault()
     e.stopPropagation()
     const $parent = $collapser.parentElement
     if ($parent.id === id) {
@@ -54,13 +47,7 @@ function onToggle(e, id, $collapser) {
     }
 }
 
-function onExpand() {
-    for (const $collapsed of collapsers) {
-        expand($collapsed)
-    }
-}
-
-function expand($collapsed) {
+function expand($collapsed: Element) {
     const $parent = $collapsed.parentElement
     if ($parent.dataset.status !== 'reduced') return
 
@@ -68,37 +55,14 @@ function expand($collapsed) {
     $parent.dataset.status = 'expanded'
 }
 
-function onReduce() {
-    for (const $collapsed of collapsers) {
-        reduce($collapsed)
-    }
-}
-
-function reduce($collapsed) {
+function reduce($collapsed: Element) {
     const $parent = $collapsed.parentElement
     if ($parent.dataset.status !== 'expanded') return
 
     const $ellipsis = $parent.querySelector('.ellipsis')
-    if ($ellipsis) $ellipsis.dataset.value = `${$collapsed.childElementCount}`
+    if ($ellipsis) $ellipsis["dataset"].value = `${$collapsed.childElementCount}`
     $parent.classList.add('collapsed')
     $parent.dataset.status = 'reduced'
-}
-
-function getParentLI($element) {
-    if ($element && $element.tagName === 'LI') return $element
-
-    while ($element && $element.tagName !== 'LI') {
-        $element = $element.parentElement
-    }
-
-    return $element
-}
-
-function onMouseClick(e) {
-    if ($selectedLI) $selectedLI.firstElementChild.classList.remove('selected')
-
-    $selectedLI = getParentLI(e.target)
-    if ($selectedLI) $selectedLI.firstElementChild.classList.add('selected')
 }
 
 init();
