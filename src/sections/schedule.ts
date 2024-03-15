@@ -1,6 +1,7 @@
 const toEntry = (title: string, venue: string, capacity: number) => ({ title, venue, capacity });
 export const Schedule = {
-    "Day 1, March 22": {
+    "Day 1, March 22": [],
+    "Day 2, March 23": {
         "10:00 AM - 11:00 AM": [
             toEntry("Opening Ceremony", "Venue 1, Main Conference", 200)
         ],
@@ -33,39 +34,7 @@ export const Schedule = {
             toEntry("Closing Ceremony - Recognition and Awards", "Venue 2, Amphitheater", 100),
             toEntry("Technical Track Placeholder", "Venue 3, Career Hub", 36),
         ]
-    },
-    "Day 2, March 23": [
-        // {
-        //     title: "Opening Ceremony",
-        //     speaker: "John Doe",
-        //     time: "10:00 AM"
-        // },
-        // {
-        //     title: "Keynote",
-        //     speaker: "Jane Doe",
-        //     time: "11:00 AM"
-        // },
-        // {
-        //     title: "Lunch",
-        //     speaker: "N/A",
-        //     time: "12:00 PM"
-        // },
-        // {
-        //     title: "Workshop",
-        //     speaker: "John Doe",
-        //     time: "1:00 PM"
-        // },
-        // {
-        //     title: "Networking",
-        //     speaker: "N/A",
-        //     time: "2:00 PM"
-        // },
-        // {
-        //     title: "Closing Ceremony",
-        //     speaker: "Jane Doe",
-        //     time: "3:00 PM"
-        // }
-    ]
+    }
 }
 
 function makeEvent(event: { title: string; speaker: string; time: string }, index: any) {
