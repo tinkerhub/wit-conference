@@ -121,8 +121,10 @@ function arrayToHTML(json: unknown[]) {
 function objectToHTML(json: Object) {
     const keys = Object.keys(json)
     const length = keys.length
+    const leaf = keys.find(key => typeof json[key] === 'object') === undefined;
 
-    let output = '<div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible">',
+    let output = leaf ? '{<ul class="obj">'
+            : '<div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible">',
         hasContents = false,
         index = 0
 
