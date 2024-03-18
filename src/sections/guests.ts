@@ -1,4 +1,4 @@
-function makeCard({name , title = "" , organization = ""}) {
+function makeCard({name, title = "", organization = ""}) {
     return `
     <div class="shadow-xl ">
         <div class="w-full h-20 bg-[#FF5237]  ">
@@ -21,13 +21,24 @@ function makeCard({name , title = "" , organization = ""}) {
 const cardsContainer = document.getElementById("guestCards");
 
 export const Guests = [
-        {name: 'Athira T J ', title: 'Data Associate', organization: 'Reap Benefit'},
-        {name: 'Akhila ', title: 'Co-Founder',  organization: 'Tech4Good Community'},
-        {name: 'Vidya ', title: 'Ex Data Scientist', organization: 'Tech4Good Community'},
-        {name: 'Riya'},
-        {name: 'Ananya'},
-        {name: 'Sumeeti'},
-        {name: 'Laya'},
+    {name: "Shreya", profile: "https://www.linkedin.com/in/shreya-krishnan-3190098/"},
+    {name: "Janhvi Patil", profile: "https://www.janhvipatil.me/"},
+    {name: "Saumya", profile: "https://www.linkedin.com/in/soumyasebastian/"},
+    {name: "Gopika KJ", profile: "https://www.linkedin.com/in/kj-gopika/"},
+    {name: "Akhila", profile: "https://www.linkedin.com/in/akhilasomanath/"},
+    {name: "Athira", profile: "https://www.linkedin.com/in/athiratj/"},
+    {name: "Vidya", profile: "https://www.linkedin.com/in/vidyasridhar15/"},
+    {name: "Sumi", profile: "https://www.linkedin.com/in/sumi-thomas-63a05a5/"},
+    {name: "Ananaya", profile: "https://www.linkedin.com/in/ananya-r/"},
+    {name: "Laya", profile: "https://www.linkedin.com/in/layaannalalan/"},
+    {name: "Ganesh Gopal", profile: "http://www.icaap.coop/icanews/meet-ganesh-gopal-ica-ap’s-new-programme-officer"},
+    {name: "Nidhi Sudhan", profile: "https://www.linkedin.com/in/nidhi-sudhan/"},
+    {name: "Reema", profile: "https://www.linkedin.com/in/reemashaji/"},
+    {name: "Varsha", profile: "https://www.linkedin.com/in/varsha-shaheen/"},
+    {name: "Kurian", profile: "https://www.linkedin.com/in/kurian-/"},
+    {name: "Seethal Anil", profile: "https://www.linkedin.com/in/seethal-anil-636124222/"},
+    {name: "Cerin", profile: "https://www.linkedin.com/in/cerinsarasanthosh/"},
+    {name: "Aksa", profile: "https://www.linkedin.com/in/aksa-rose/"},
 ];
 
 if (cardsContainer)
