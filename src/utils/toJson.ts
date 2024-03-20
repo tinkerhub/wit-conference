@@ -17,9 +17,8 @@ function decorateWithSpan(value: Object, className: string) {
     return `<span class="${className}">${htmlEncode(value)}</span>`
 }
 
-function withA(url: string | Object){
-    return `<a target="_blank" href="${url}">${htmlEncode(url)}</a>`
-
+function withA(url: string | Object, text?: string | Object) {
+    return `<a target="_blank" href="${url}">${htmlEncode(text || url)}</a>`
 }
 
 export default function valueToHTML(value: Object) {
@@ -42,7 +41,7 @@ export default function valueToHTML(value: Object) {
                 output += `${decorateWithSpan('"', 'type-string')}${withA(value)}${decorateWithSpan('"', 'type-string')}`
             }
             else if (/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value as string)) {
-                output += `${decorateWithSpan('"', 'type-string')}${withA("mailto:"+value)}${htmlEncode(value)}</a>${decorateWithSpan('"', 'type-string')}`
+                output += `${decorateWithSpan('"', 'type-string')}${withA("mailto:"+value, value)}${decorateWithSpan('"', 'type-string')}`
             }
             else {
                 output += decorateWithSpan(`"${value}"`, 'type-string')
